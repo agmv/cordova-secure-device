@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message">Esta aplicação não corre num dispositivo com acesso privilegiado ("rooted") ou não tenha o bloqueio de ecrã configurado.</string>
+    <string name="label">Fechar</string>
+</resources>

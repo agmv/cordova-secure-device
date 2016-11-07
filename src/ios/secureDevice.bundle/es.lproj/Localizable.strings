@@ -1,0 +1,9 @@
+/* 
+  Localized.strings
+  secureDevice
+
+  Created by André Vieira on 07/11/2016.
+
+*/
+"This application does not run on a device that is jailbroken or does not have a passcode set." = "Esta aplicación no se ejecuta en un dispositivo con acceso privilegiado (\"jailbroken\") o no se ha configurado el bloqueo de pantalla.";
+"Close" = "Cerrar";

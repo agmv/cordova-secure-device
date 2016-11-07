@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message">このアプリケーションは、特権アクセス（「rooted」）か、画面ロックを設定していないと、デバイス上で実行されません。</string>
+    <string name="label">近いです</string>
+</resources>

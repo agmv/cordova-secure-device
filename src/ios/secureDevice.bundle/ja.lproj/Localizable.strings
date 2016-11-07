@@ -1,0 +1,9 @@
+/* 
+  Localized.strings
+  secureDevice
+
+  Created by André Vieira on 07/11/2016.
+
+*/
+"This application does not run on a device that is jailbroken or does not have a passcode set." = "このアプリケーションは、特権アクセス（「jailbroken」）か、画面ロックを設定していないと、デバイス上で実行されません。";
+"Close" = "近いです";

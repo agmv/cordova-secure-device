@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message">Diese Anwendung läuft nicht auf einem Gerät mit privilegierten Zugang ("rooted") oder Sie haben nicht die Bildschirmsperre einrichten.</string>
+    <string name="label">Schließen</string>
+</resources>
