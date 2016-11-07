@@ -3,6 +3,15 @@ When the plugin initializes it validates if the device is compromised by validat
 
 The plugin does not expose any javascript interface, the validation is done when the plugin initializes.
 
+## I18n
+The plugin supports the following languages:
+- English 
+- Portuguese
+- Spanish
+- French
+- German
+- Japanese
+
 # License
 Copyright 2016 André Vieira
 
