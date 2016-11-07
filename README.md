@@ -12,7 +12,7 @@ The plugin supports the following languages:
 - German
 - Japanese
 
-# License
+## License
 Copyright 2016 André Vieira
 
 Licensed under the Apache License, Version 2.0 (the "License");
