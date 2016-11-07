@@ -1,9 +1,8 @@
 //
-//  UIDevice+JailBroken.m
-//  JailBroken
-//
-//  Created by André Vieira on 06/11/2016.
-//  Copyright (c) 2016 André Vieira. All rights reserved.
+//  JailbreakDetection.m
+//  Copyright (c) 2016 André Vieira
+//  Adapted from Lee Crossley - http://ilee.co.uk
+//  Techniques from http://highaltitudehacks.com/2013/12/17/ios-application-security-part-24-jailbreak-detection-and-evasion/
 //
 
 #import "UIDevice+JailBroken.h"

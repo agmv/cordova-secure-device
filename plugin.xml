@@ -3,7 +3,7 @@
     <name>secureDevice</name>
     <description>Stops app from running if device is not secure, i.e. it is jailbroken, rooted, or doesn't have a passcode set.</description>
     <author>André Vieira</author>
-    <license>MIT</license>
+    <license>Apache 2.0</license>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="secureDevice">

@@ -1,9 +1,8 @@
+
 //
-//  UIDevice+JailBroken.h
-//  JailBroken
-//
-//  Created by André Vieira on 06/11/2016.
-//  Copyright (c) 2016 André Vieira. All rights reserved.
+//  JailbreakDetection.h
+//  Copyright (c) 2016 André Vieira
+//  Adapted from Lee Crossley - http://ilee.co.uk
 //
 
 #import <UIKit/UIKit.h>

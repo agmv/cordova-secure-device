@@ -1,3 +1,19 @@
+/*
+   Copyright 2016 André Vieira
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
 package com.outsystemscloud.andrevieira;
 
 import org.apache.cordova.CordovaPlugin;
@@ -55,6 +71,11 @@ public class secureDevice extends CordovaPlugin {
         }
     }
 
+    /**
+     * Detect weather device is rooted or not
+     * @author trykov
+     * @source https://github.com/trykovyura/cordova-plugin-root-detection
+     */
     private boolean isDeviceRooted() {
         return checkBuildTags() || checkSuperUserApk() || checkFilePath();
     }
@@ -76,12 +97,16 @@ public class secureDevice extends CordovaPlugin {
         return false;
     }
 
+
+
     /**
      * <p>Checks to see if the lock screen is set up with either a PIN / PASS / PATTERN</p>
      *
      * <p>For Api 16+</p>
      *
      * @return true if PIN, PASS or PATTERN set, false otherwise.
+     * @author doridori
+     * @source https://gist.github.com/doridori/54c32c66ef4f4e34300f
      */
     public static boolean doesDeviceHaveSecuritySetup(Context context)
     {
@@ -128,8 +153,8 @@ public class secureDevice extends CordovaPlugin {
         final CordovaInterface cordova = this.cordova;
         final Activity activity = cordova.getActivity();
 
-        /*Runnable runnable = new Runnable() {
-            public void run() {*/
+        Runnable runnable = new Runnable() {
+            public void run() {
 
                 AlertDialog.Builder dlg = createDialog(cordova);
                 dlg.setMessage(message);
@@ -147,9 +172,9 @@ public class secureDevice extends CordovaPlugin {
                     }
                 });
                 changeTextDirection(dlg);
-            /*};
+            };
         };
-        this.cordova.getActivity().runOnUiThread(runnable);*/
+        this.cordova.getActivity().runOnUiThread(runnable);
     }
 
     @SuppressLint("NewApi")
