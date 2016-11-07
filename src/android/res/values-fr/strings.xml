@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="message">Cette application ne fonctionne pas sur un périphérique avec un accès privilégié («rooted») ou si vous ne l'avez pas mis en place verrouillage de l'écran.</string>
+    <string name="message">Cette application ne fonctionne pas sur un périphérique avec un accès privilégié («rooted») ou si vous ne l\'avez pas mis en place verrouillage de l\'écran.</string>
     <string name="label">Fermer</string>
 </resources>
