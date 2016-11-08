@@ -48,16 +48,29 @@ import android.widget.TextView;
 
 public class secureDevice extends CordovaPlugin {
 
+    CordovaInterface cordova;
+    CordovaWebView view;
     
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
+        this.cordova = cordova;
+        this.view = webView;
+        checkDevice();
+    }
+
+    @Override
+    public void onResume(boolean multiTasking) {
+        checkDevice();
+    }
+
+    private void checkDevice() {
         boolean _isDeviceRooted = isDeviceRooted();
-        boolean _isPasscodeSet = doesDeviceHaveSecuritySetup(cordova.getActivity());
+        boolean _isPasscodeSet = doesDeviceHaveSecuritySetup(this.cordova.getActivity());
 
         if (_isDeviceRooted || !_isPasscodeSet) {
             // Remove View
-            View v = webView.getView();
+            View v = this.view.getView();
             ViewGroup viewParent = (ViewGroup) v.getParent();
             viewParent.removeView(v);
 

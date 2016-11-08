@@ -26,24 +26,34 @@
 
 - (void)pluginInitialize
 {
-	BOOL jailbroken = [UIDevice currentDevice].isJailBroken;
-	LNPasscodeStatus status = [UIDevice currentDevice].passcodeStatus;
-
-	if (jailbroken || status == LNPasscodeStatusDisabled || status == LNPasscodeStatusUnknown) {
-		//Remove webView
-		[self.webView removeFromSuperview];
-
-		//Show alert dialog and close app
-		NSBundle *thisBundle = [NSBundle bundleWithPath: [[NSBundle mainBundle] pathForResource:NSStringFromClass([self class]) ofType: @"bundle"]];
-		NSString *alertMessage = [thisBundle localizedStringForKey:@"This application does not run on a device that is jailbroken or does not have a passcode set." value:nil table:nil];
-		NSString *alertCloseButtonText = [thisBundle localizedStringForKey:@"Close" value:nil table:nil];
-		
-		dispatch_async( dispatch_get_main_queue(), ^ {
-			[self showAlert:alertMessage closeLabel:alertCloseButtonText];
-		});		
-	}
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onResume:)
+                                               name:UIApplicationDidBecomeActiveNotification object:nil];
+  [self checkDevice];
 }
 
+- (void) onResume:(UIApplication *)application 
+{
+  [self checkDevice];
+}
+
+- (void) checkDevice
+{
+  BOOL jailbroken = [UIDevice currentDevice].isJailBroken;
+  LNPasscodeStatus status = [UIDevice currentDevice].passcodeStatus;
+
+  if (jailbroken || status == LNPasscodeStatusDisabled || status == LNPasscodeStatusUnknown) {
+    NSBundle *thisBundle = [NSBundle bundleWithPath: [[NSBundle mainBundle] pathForResource:NSStringFromClass([self class]) ofType: @"bundle"]];
+    NSString *alertMessage = [thisBundle localizedStringForKey:@"This application does not run on a device that is jailbroken or does not have a passcode set." value:nil table:nil];
+    NSString *alertCloseButtonText = [thisBundle localizedStringForKey:@"Close" value:nil table:nil];
+    
+    dispatch_async( dispatch_get_main_queue(), ^ {
+      //Remove webView
+      [self.webView removeFromSuperview];
+      // Show Alert
+      [self showAlert:alertMessage closeLabel:alertCloseButtonText];
+    });   
+  }
+}
 /*
  * showAlert - Common method to instantiate the alert view for alert
  * Parameters:
