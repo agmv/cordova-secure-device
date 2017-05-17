@@ -135,8 +135,15 @@ public class secureDevice extends CordovaPlugin {
         ContentResolver cr = context.getContentResolver();
         try
         {
-            int lockPatternEnable = Settings.Secure.getInt(cr, Settings.Secure.LOCK_PATTERN_ENABLED);
-            return lockPatternEnable == 1;
+            // This constant was deprecated in API level 23. 
+            // Use KeyguardManager to determine the state and security level of the keyguard. 
+            // Accessing this setting from an app that is targeting M or later throws a SecurityException.
+            if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) {
+                int lockPatternEnable = Settings.Secure.getInt(cr, Settings.Secure.LOCK_PATTERN_ENABLED);
+                return lockPatternEnable == 1;
+            } else {
+                return false;
+            }
         }
         catch (Settings.SettingNotFoundException e)
         {
