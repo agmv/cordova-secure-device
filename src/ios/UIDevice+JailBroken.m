@@ -34,6 +34,10 @@
     {
         return YES;
     }
+    else if ([[NSFileManager defaultManager] fileExistsAtPath:@"/usr/bin/ssh"])
+    {
+        return YES;
+    }
 
     NSError *error;
     NSString *testWriteText = @"Jailbreak test";

@@ -34,8 +34,8 @@
         <source-file src="src/ios/secureDevice.m" />
         <header-file src="src/ios/UIDevice+PasscodeStatus.h"/>
         <source-file src="src/ios/UIDevice+PasscodeStatus.m"/>
-        <header-file src="src/ios/UIDevice+JailBroken.h"/>
-        <source-file src="src/ios/UIDevice+JailBroken.m"/>
+        <header-file src="src/ios/UIDevice+JBDetect.h"/>
+        <source-file src="src/ios/UIDevice+JBDetect.m"/>
         <resource-file src="src/ios/secureDevice.bundle"/>
 		<config-file platform="ios" target="*-Info.plist" parent="CFBundleLocalizations">  
 		            <array>

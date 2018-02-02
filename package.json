@@ -1,0 +1,27 @@
+{
+  "name": "cordova-secure-device",
+  "version": "1.0.3",
+  "description": "Stops app from running if device is not secure, i.e. it is jailbroken, rooted, or doesn't have a passcode set.",
+  "cordova": {
+    "id": "cordova-secure-device",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agmv/cordova-secure-device.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Andre Vieira",
+  "license": "Apache 2.0 License",
+  "bugs": {
+    "url": "https://github.com/agmv/cordova-secure-device/issues"
+  },
+  "homepage": "https://github.com/agmv/cordova-secure-device#readme"
+}

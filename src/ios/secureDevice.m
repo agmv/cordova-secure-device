@@ -20,7 +20,7 @@
 #import <Cordova/CDVViewController.h>
 #import "secureDevice.h"
 #import "UIDevice+PasscodeStatus.h"
-#import	"UIDevice+JailBroken.h"
+#import "UIDevice+JBDetect.h"
 
 @implementation secureDevice
 
@@ -38,7 +38,7 @@
 
 - (void) checkDevice
 {
-  BOOL jailbroken = [UIDevice currentDevice].isJailBroken;
+  BOOL jailbroken = [UIDevice currentDevice].isJB;
   LNPasscodeStatus status = [UIDevice currentDevice].passcodeStatus;
 
   if (jailbroken || status == LNPasscodeStatusDisabled || status == LNPasscodeStatusUnknown) {
