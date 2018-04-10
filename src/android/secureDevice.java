@@ -71,9 +71,12 @@ public class secureDevice extends CordovaPlugin {
         if (_isDeviceRooted || !_isPasscodeSet) {
             // Remove View
             View v = this.view.getView();
-            ViewGroup viewParent = (ViewGroup) v.getParent();
-            viewParent.removeView(v);
-
+            if (v != null) {
+                ViewGroup viewParent = (ViewGroup) v.getParent();
+                if (viewParent != null) {
+                    viewParent.removeView(v);
+                }
+            }
             // Show message and quit
             Application app = cordova.getActivity().getApplication();
             String package_name = app.getPackageName();
