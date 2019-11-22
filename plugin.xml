@@ -17,6 +17,8 @@
 		<source-file src="src/android/res/values-fr/strings.xml" target-dir="res/values-fr" />
 		<source-file src="src/android/res/values-ja/strings.xml" target-dir="res/values-ja" />
         <source-file src="src/android/res/values-pt/strings.xml" target-dir="res/values-pt" />
+		<source-file src="src/android/res/values-nl/strings.xml" target-dir="res/values-nl" />
+		<source-file src="src/android/res/values-aw/strings.xml" target-dir="res/values-aw" />
         <config-file parent="/resources" target="res/values/strings.xml">
         	<string name="message">This application does not run on a device that is rooted or does not have a passcode set.</string>
         	<string name="label">Close</string>
@@ -45,6 +47,8 @@
 		                <string>es</string>
 		                <string>de</string>
 		                <string>en</string>
+						<string>nl</string>
+						<string>aw</string>
 		            </array>
 		</config-file>
     </platform>

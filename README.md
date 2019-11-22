@@ -11,6 +11,8 @@ The plugin supports the following languages:
 - French
 - German
 - Japanese
+- Dutch
+- Papiamento
 
 ## License
 Copyright 2016 André Vieira
