@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message">Esta aplicação não pode ser executada em um dispositivo com acesso privilegiado ("rooted") ou que não tenha o bloqueio de tela configurado por PIN ou senha.</string>
+    <string name="label">Fechar</string>
+</resources>
