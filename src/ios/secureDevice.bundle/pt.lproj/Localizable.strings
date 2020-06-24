@@ -5,5 +5,5 @@
   Created by André Vieira on 07/11/2016.
 
 */
-"This application does not run on a device that is jailbroken or does not have a passcode set." = "Esta aplicação não pode ser executada em um dispositivo que não tenha o bloqueio de tela configurado por PIN ou senha ou este dispositivo possui acesso privilegiado (\"jailbroken\").";
+"This application does not run on a device that is jailbroken or does not have a passcode set." = "Esta aplicação não pode ser executada em um dispositivo que possua acesso privilegiado (\"jailbroken\").";
 "Close" = "Fechar";
